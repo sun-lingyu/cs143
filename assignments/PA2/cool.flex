@@ -196,7 +196,7 @@ LE      <=
 
 <STRING>\0 {
   BEGIN(STRING_ERROR);
-  strcpy(string_buf_ptr,"String contains null character");
+  strcpy(string_buf_ptr,"String contains null character.");
   cool_yylval.error_msg=string_buf_ptr;
   string_length = 0;
   return ERROR;
@@ -230,7 +230,7 @@ LE      <=
 }
 
 <STRING>. {
-  if(string_length==MAX_STR_CONST){
+  if(string_length==MAX_STR_CONST-1){
     BEGIN(STRING_ERROR);
     strcpy(string_buf_ptr,"String constant too long");
     cool_yylval.error_msg=string_buf_ptr;
@@ -246,6 +246,10 @@ LE      <=
     curr_lineno++;
   }
   BEGIN(INITIAL);
+}
+
+<STRING_ERROR>. {
+
 }
 
   /*
