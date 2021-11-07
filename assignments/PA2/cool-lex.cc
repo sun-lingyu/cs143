@@ -1304,7 +1304,7 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 /*
-  *  7. OBJECTID
+  *  7. TYPEID
   */
 case 40:
 YY_RULE_SETUP
@@ -1316,7 +1316,7 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 /*
-  *  8. TYPEID
+  *  8. Object ID
   */
 case 41:
 YY_RULE_SETUP

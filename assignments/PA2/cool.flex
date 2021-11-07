@@ -275,7 +275,7 @@ f[a|A][l|L][s|S][e|E]  {
 }
 
   /*
-  *  7. OBJECTID
+  *  7. TYPEID
   */
 
 [[:upper:]][[:alnum:]_]*  {
@@ -285,7 +285,7 @@ f[a|A][l|L][s|S][e|E]  {
 }
 
   /*
-  *  8. TYPEID
+  *  8. Object ID
   */
 
 [[:lower:]][[:alnum:]_]*  {

@@ -9,6 +9,19 @@
 
 (* no error *)
 class A {
+    a;(*error in feature*)
+
+    method():Int {
+        let a:Int <- 1+3**,b:int,_c:Int,d:Int in 1 (*error in let*)
+    };
+
+    method1():Int {
+        {
+            a<-;(*error in {}*)
+            1+1;
+            1++;(*should report error near '+'*)
+        }
+    }
 };
 
 (* error:  b is not a type identifier *)
